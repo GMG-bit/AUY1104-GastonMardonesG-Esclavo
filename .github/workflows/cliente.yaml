@@ -1,0 +1,18 @@
+on: [push]
+
+jobs:
+    mi-job:
+        uses: GMG-bit/AUY1104-GastonMardonesG-Master/.github/workflows/holamundo.yaml@main
+        # ↑ Formato: {owner}/{repo}/.github/workflows/{file}.yaml@{ref}
+        secrets:
+            DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+            DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+            
+# Alternativa con inherit (más conveniente, menos explícito) YAML
+# jobs:
+# mi-job:
+# uses: asanchezo-duoc/AUY1104-SharedWorkflows/.github/workflows/deploy-api.yaml@pipeTest
+# secrets: inherit # ← Pasa TODOS los secretos del repo consumidor automáticamente
+# ⚠️ Usar inherit con precaución
+# secrets: inherit es conveniente pero menos seguro en entornos donde los repositorios compartidos tienen acceso amplio. La forma explícita (nombre por
+# nombre) garantiza que solo se exponen los secretos necesarios.
