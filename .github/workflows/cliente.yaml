@@ -2,7 +2,7 @@ on: [push]
 
 jobs:
     mi-job:
-        uses: GMG-bit/AUY1104-GastonMardonesG-Master/.github/workflows/holamundo.yaml@main
+        uses: GMG-bit/AUY1104-GastonMardonesG-Master/.github/workflows/depkoy-api.yaml@main
         # ↑ Formato: {owner}/{repo}/.github/workflows/{file}.yaml@{ref}
         secrets:
             DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
