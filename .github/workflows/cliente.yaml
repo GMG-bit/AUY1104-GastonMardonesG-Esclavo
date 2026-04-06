@@ -4,6 +4,11 @@ jobs:
     mi-job:
         uses: GMG-bit/AUY1104-GastonMardonesG-Master/.github/workflows/depkoy-api.yaml@main
         # ↑ Formato: {owner}/{repo}/.github/workflows/{file}.yaml@{ref}
+        with:
+            image_name: 'my-api'
+            image_tag: ${{ github.sha }}
+            # Pasamos los inputs requeridos por el workflow llamado
+            # Estos inputs se definen en el workflow de destino (deploy-api.yaml)
         secrets:
             DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
             DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
