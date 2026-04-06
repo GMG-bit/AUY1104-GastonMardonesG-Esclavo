@@ -6,7 +6,7 @@ jobs:
         # ↑ Formato: {owner}/{repo}/.github/workflows/{file}.yaml@{ref}
         with:
             image_name: 'my-api'
-            image_tag: ${{ github.sha }}
+            image_tag: ${{ github.ref_name}} # Ejemplo de uso de variable de contexto para tag dinámico
             # Pasamos los inputs requeridos por el workflow llamado
             # Estos inputs se definen en el workflow de destino (deploy-api.yaml)
         secrets:
