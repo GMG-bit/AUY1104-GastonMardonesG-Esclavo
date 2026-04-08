@@ -36,7 +36,7 @@ Cada instrucción del Dockerfile es un panqueque nuevo que se pone encima del an
 Si cambias un panqueque de abajo (el código), Docker tiene que tirar todos los que estaban encima y cocinarlos de nuevo.
 
 Al poner los archivos package.json primero, dejamos el panqueque que más tarda en cocinarse (npm ci) lo más abajo posible. Así, mientras no cambies las librerías, ese panqueque se queda ahí quietito y Docker solo cocina los de arriba (tu código).
-=========================================================================================================
+
 ## .dockerignore 🚫
 node_modules
 npm-debug.log
