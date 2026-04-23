@@ -1,4 +1,7 @@
-on: [push]
+on: 
+    push:
+        tags:
+            - 'v*.*.*' # Solo se ejecuta en pushes a tags que sigan el formato de versionado semántico (ej. v1.0.0)
 
 jobs:
     mi-job:
