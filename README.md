@@ -60,3 +60,9 @@ Caché de Docker 🍰: Permite que Docker reutilice instalaciones previas si no 
 Velocidad con npm ci ⚡: Al tener el "candado" (lock), npm no pierde tiempo calculando versiones y va directo a la descarga.
 
 Consistencia Total 🔒: Te aseguras de que las versiones de las librerías sean exactamente las mismas en tu computadora y en el servidor.
+
+## Tip Pro: Si por error creaste un tag mal y quieres borrarlo para que no ensucie tu pipeline:
+
+Borrar local: git tag -d nombre-del-tag
+
+Borrar en GitHub: git push --delete origin nombre-del-tag
