@@ -1,0 +1,14 @@
+name: Pipeline de Test
+on:
+    push:
+        branches:
+        - '**'        # Se activa en cualquier rama... El doble asterisco indica "cualquier rama" (ej: develop, feature/login)
+        - '!main'     # ...EXCEPTO en main, El signo '!' es una negación. Dice: "Ejecuta en todas, MENOS en main"
+        tags-ignore:
+        - '*'        # No se activa si el push es un tag
+                    # Esto garantiza que las pruebas no se disparen cuando estamos 
+                    # intentando hacer un lanzamiento (Release).
+jobs:
+    ejecutar-validaciones:
+    # Llamamos al workflow del Master
+        uses: GMG-bit/AUY1104-GastonMardonesG-Master/.github/workflows/test-api.yaml@main
