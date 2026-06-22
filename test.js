@@ -19,10 +19,6 @@ const result = spawnSync(process.execPath, [jestBin, '--runInBand', ...passthrou
   env: process.env,
 });
 
-test('Forzar fallo de test en EA3', () => {
-  expect(true).toBe(false);
-});
-
 if (result.error) {
   console.error(result.error.message);
   process.exit(1);
