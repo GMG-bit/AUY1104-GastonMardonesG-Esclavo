@@ -69,7 +69,4 @@ describe('API HTTP (GET y POST)', () => {
       expect(res.body.error).toBeDefined();
     });
   });
-  test('Forzar fallo de test en EA3', () => {
-  expect(true).toBe(false);
-  });
 });
